@@ -4,7 +4,10 @@
 int main() {
     double a;
     scanf("%lf", &a);
-    a = floor(a * 10 + 0.5);
-    printf("%f\n", a/10);
+    a = a * 10;
+    a = a + 0.5;
+    a = (int)a;
+    a = a/10;
+    printf("%f\n", a);
     return 0;
 }
