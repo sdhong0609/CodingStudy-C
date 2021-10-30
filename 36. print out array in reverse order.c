@@ -1,18 +1,14 @@
 #include <stdio.h>
-
+int arr[101];
 int main() {
-    int n, n2;
+    int n, i;
     scanf("%d", &n);
-    
-    int a[n];
-    for (int i=0; i<n; i++) {
-        scanf("%d", &n2);
-        a[i] = n2;
+    for (i=0; i<n; i++) {
+        scanf("%d", &arr[i]);
     }
-    for (int i=0; i<n; i++) {
-        printf("%d ", a[n-i-1]);
+    for (i=n-1; i>=0; i--) {
+        printf("%d ", arr[i]);
     }
-    printf("\n");
-    
+
     return 0;
 }
