@@ -1,28 +1,25 @@
 #include <stdio.h>
 
+int arr[9];
+
 int main() {
-    int a[20];
-    int b, n;
-    int temp[20];
+    int i, j, k, tmp;
+    for (i=0; i<9; i++) {
+        scanf("%d", &arr[i]);
+    }
+    scanf("%d", &k);
+    
+    for (i=0; i<k; i++) {
+        tmp = arr[0];
+        for (j=0; j<8; j++) {
+            arr[j] = arr[j+1];
+        }
+        arr[j] = tmp;
+    }
     
     for (int i=0; i<9; i++) {
-        scanf("%d", &b);
-        a[i] = b;
+        printf("%d ", arr[i]);
     }
-    scanf("%d", &n);
     
-    for (int i=0; i<n; i++) {
-        temp[i] = a[i];
-    }
-    for (int i=0; i<9; i++) {
-        a[i] = a[i+n];
-    }
-    for (int i=0; i<n; i++) {
-        a[9-n+i] = temp[i];
-    }
-    for (int i=0; i<9; i++) {
-        printf("%d ", a[i]);
-    }
-    printf("\n");
     return 0;
 }
