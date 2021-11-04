@@ -1,17 +1,16 @@
 #include <stdio.h>
 #include <string.h>
 
-char arr[20];
 int main() {
-    int n;
-    scanf("%s", &arr);
-    n = strlen(arr);
+    char str[100];
+    int n, i;
+    scanf("%s", &str);
+    n = strlen(str);
 
-    for (int i=0; i<n; i++) {
-        if (arr[i] == 'A') {
-            arr[i] = '#';
-        }
+    for (i=0; i<n; i++) {
+        if (str[i] == 'A') str[i] = '#';
     }
-    printf("%s\n", arr);
+    printf("%s\n", str);
+
     return 0;
 }
