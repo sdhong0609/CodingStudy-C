@@ -1,21 +1,15 @@
 #include <stdio.h>
 
+int arr[11][11];
 int main() {
-    int n, i, j, k=1, l=2;
+    int n, i, j, k=1;
     scanf("%d", &n);
-    int arr[n][n];
     
     for (i=0; i<n; i++) {
         for (j=0; j<n; j++) {
-            arr[i][j] = 0;
-            if (i==j) {
+            if (i==j || i+j==n-1) {
                 arr[i][j] = k;
-                k += 2;
-            }
-            if (i+j == n-1) {
-                if (i==j) continue;
-                arr[i][j] = l;
-                l += 2;
+                k++;
             }
         }
     }
