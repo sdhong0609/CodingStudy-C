@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int arr[11][11];
 int main() {
     int n, i, j, k=1;
